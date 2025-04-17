@@ -1,3 +1,4 @@
+import 'package:clean_architecture/main.dart';
 import 'package:clean_architecture/navigator/app_navigator.dart';
 import 'package:clean_architecture/ui/user_details/user_details_initial_params.dart';
 import 'package:clean_architecture/ui/user_details/user_details_page.dart';
@@ -7,7 +8,7 @@ class UserDetailsNavigator {}
 
 mixin UserDetailsRoute {
   openUserDetailsPage(UserDetailsInitialParams initialParams) {
-    navigator.push(context, UserDetailsPage(initialParams: initialParams));
+    navigator.push(context, UserDetailsPage(userDetailsCubit: getIt(param1: initialParams)));
   }
 
   AppNavigator get navigator;

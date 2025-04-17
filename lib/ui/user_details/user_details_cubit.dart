@@ -3,8 +3,7 @@ import 'package:clean_architecture/ui/user_details/user_details_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class UserDetailsCubit extends Cubit<UserDetailsState>{
-  UserDetailsCubit():super (UserDetailsState.initial());
-
- void onInt(UserDetailsInitialParams initialParams)=> emit(state.copyWith(user: initialParams.user));
+  UserDetailsCubit(this.initialParams):super (UserDetailsState.initial(initialParams));
+final UserDetailsInitialParams initialParams;
 
 }
