@@ -9,7 +9,7 @@ class UserListNavigator with UserDetailsRoute {
   @override
   late BuildContext context;
   @override
-  late AppNavigator navigator;
+  final AppNavigator navigator;
 }
 
 mixin UserListRoute {
